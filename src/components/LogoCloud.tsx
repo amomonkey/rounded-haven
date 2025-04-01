@@ -1,13 +1,15 @@
 
+import React from "react";
+import { Apple, Chrome, Figma, Slack, Github, Trello } from "lucide-react";
+
 const LogoCloud = () => {
-  // In a real implementation, these would be actual company logos
-  const companies = [
-    { name: "Company 1" },
-    { name: "Company 2" },
-    { name: "Company 3" },
-    { name: "Company 4" },
-    { name: "Company 5" },
-    { name: "Company 6" },
+  const companyLogos = [
+    { name: "Apple", icon: <Apple className="h-8 w-8 text-gray-700" /> },
+    { name: "Google", icon: <Chrome className="h-8 w-8 text-gray-700" /> },
+    { name: "Figma", icon: <Figma className="h-8 w-8 text-gray-700" /> },
+    { name: "Slack", icon: <Slack className="h-8 w-8 text-gray-700" /> },
+    { name: "GitHub", icon: <Github className="h-8 w-8 text-gray-700" /> },
+    { name: "Trello", icon: <Trello className="h-8 w-8 text-gray-700" /> },
   ];
 
   return (
@@ -18,10 +20,11 @@ const LogoCloud = () => {
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-          {companies.map((company, index) => (
+          {companyLogos.map((company, index) => (
             <div key={index} className="flex justify-center">
-              <div className="h-8 w-24 bg-gray-200 rounded flex items-center justify-center text-gray-400 text-sm">
-                {company.name}
+              <div className="flex flex-col items-center gap-2">
+                {company.icon}
+                <span className="text-sm text-gray-500">{company.name}</span>
               </div>
             </div>
           ))}

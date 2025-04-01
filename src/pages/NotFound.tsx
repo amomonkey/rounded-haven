@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
   const location = useLocation();
@@ -25,9 +26,11 @@ const NotFound = () => {
           <p className="text-gray-600 mb-8 max-w-md mx-auto">
             We couldn't find the page you're looking for. It might have been moved or doesn't exist.
           </p>
-          <Button className="btn-primary" href="/">
-            Return to Home
-          </Button>
+          <Link to="/">
+            <Button className="btn-primary">
+              Return to Home
+            </Button>
+          </Link>
         </div>
       </div>
       <Footer />
