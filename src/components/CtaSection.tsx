@@ -1,10 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 const CtaSection = () => {
-  return (
-    <section className="py-20 bg-primary-purple text-white">
+  return <section className="py-20 bg-primary-purple text-white">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -18,7 +15,7 @@ const CtaSection = () => {
               Start for free
               <ArrowRight size={18} className="ml-2" />
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/10 text-base py-6 px-8 rounded-lg">
+            <Button variant="outline" className="border-white hover:bg-white/10 text-base py-6 px-8 rounded-lg text-zinc-50">
               Book a demo
             </Button>
           </div>
@@ -27,8 +24,6 @@ const CtaSection = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CtaSection;

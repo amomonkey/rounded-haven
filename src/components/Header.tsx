@@ -1,16 +1,13 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link } from 'react-router-dom';
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
   return <header className="py-4 border-b border-gray-100 bg-white sticky top-0 z-40">
       <div className="container-custom flex items-center justify-between">
         <div className="flex items-center">
-          <Link to="/" className="font-bold text-xl text-primary-purple">FolkSync</Link>
+          <Link to="/" className="font-bold text-xl text-primary-purple">Ai Builder</Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -74,5 +71,4 @@ const Header = () => {
         </div>}
     </header>;
 };
-
 export default Header;
